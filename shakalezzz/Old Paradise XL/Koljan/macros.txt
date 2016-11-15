@@ -1,0 +1,76 @@
+R 0 1 0
+Open Overview
+########
+F12 0 0 0
+LastObject 
+########
+F1 0 0 0
+LastObject 
+########
+Ctrl 1 0 0
+UseSkill Hiding
+########
+Space 0 0 0
+OpenDoor 
+########
+Alt 0 1 0
+AllNames 
+########
+Z 0 0 0
+UseSkill Detecting Hidden
+########
+F1 0 0 0
+CastSpell Paralyze
+LastTarget 
+########
+4 0 0 0
+CastSpell Weaken
+LastTarget 
+########
+F2 0 0 0
+CastSpell Poison
+LastTarget 
+########
+2 0 0 0
+CastSpell Greater Heal
+TargetSelf 
+########
+W 0 0 0
+AttackLast 
+########
+Esc 0 0 0
+TargetNext 
+########
+1 0 0 0
+CastSpell Protection
+TargetSelf 
+########
+3 0 0 0
+CastSpell Magic Arrow
+########
+Q 0 0 0
+Say .DRINK HEAL
+########
+I 0 0 0
+Say .DRINK INVIS
+########
+B 0 0 0
+Say .USEBANDAGE
+TargetSelf 
+########
+R 0 0 0
+CastSpell Lightning
+LastTarget 
+########
+Y 0 0 0
+CastSpell Magic Reflection
+TargetSelf 
+########
+7 0 0 0
+CastSpell Bless
+TargetSelf 
+########
+F3 0 0 0
+CastSpell Flame Strike
+LastTarget 
+########
