@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D18FFD35-93C6-4D20-B4FF-174435EA3050}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTestProject7</RootNamespace>
+    <AssemblyName>UnitTestProject7</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TechTalk.SpecRun, Version=1.5.2.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecRun.NUnit.1.5.2\lib\net40\TechTalk.SpecRun.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.0.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.0.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Cucumber\Promotional.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotional.feature</DependentUpon>
+    </Compile>
+    <Compile Include="pages\activatePromotional.cs" />
+    <Compile Include="pages\addPromotional.cs" />
+    <Compile Include="pages\deactivatePromotional.cs" />
+    <Compile Include="pages\deletePromotionalNo.cs" />
+    <Compile Include="pages\deletePromotionalYes.cs" />
+    <Compile Include="step_definitions\PromotionalSteps.cs" />
+    <Compile Include="step_definitions\ActivateBrandSteps.cs" />
+    <Compile Include="step_definitions\ActivateDeactivateSurveySteps.cs" />
+    <Compile Include="step_definitions\AddNewBrandPage.cs" />
+    <Compile Include="step_definitions\BrandCompanySteps.cs" />
+    <Compile Include="step_definitions\DeleteBrandYesNoSteps.cs" />
+    <Compile Include="step_definitions\EditBrandSteps.cs" />
+    <Compile Include="step_definitions\OpenBrandSteps.cs" />
+    <Compile Include="step_definitions\AddNewSurveySteps.cs" />
+    <Compile Include="Cucumber\SpecFlowFeature1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Company.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Company.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Brands.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Brands.feature</DependentUpon>
+    </Compile>
+    <Compile Include="step_definitions\DeleteSurveyNoSteps.cs" />
+    <Compile Include="step_definitions\EditQuestionSteps.cs" />
+    <Compile Include="step_definitions\EditSurveySteps.cs" />
+    <Compile Include="pages\addSurvey.cs" />
+    <Compile Include="pages\deactivateBrands.cs" />
+    <Compile Include="pages\deleteBrandNo.cs" />
+    <Compile Include="pages\editBrand.cs" />
+    <Compile Include="pages\openBrand.cs" />
+    <Compile Include="pages\addBrand.cs" />
+    <Compile Include="pages\deactiveActivateSurveys.cs" />
+    <Compile Include="pages\deleteSurveyNo.cs" />
+    <Compile Include="pages\deleteSurveyYes.cs" />
+    <Compile Include="pages\editQuestion.cs" />
+    <Compile Include="pages\editSurvey.cs" />
+    <Compile Include="pages\openBrandCompanies.cs" />
+    <Compile Include="step_definitions\AddQuestionSteps.cs" />
+    <Compile Include="Cucumber\Questions.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.feature</DependentUpon>
+    </Compile>
+    <Compile Include="step_definitions\DeactivateQuestionSteps.cs" />
+    <Compile Include="step_definitions\DeleteContactNoSteps.cs" />
+    <Compile Include="step_definitions\DeleteContactYesSteps.cs" />
+    <Compile Include="step_definitions\DeleteQuestionNoSteps.cs" />
+    <Compile Include="step_definitions\DeleteQuestionYesSteps.cs" />
+    <Compile Include="step_definitions\DeleteSurveyYesSteps.cs" />
+    <Compile Include="step_definitions\OpenContactPageSteps.cs" />
+    <Compile Include="step_definitions\OpenQuestionPageSteps.cs" />
+    <Compile Include="pages\addQuestion.cs" />
+    <Compile Include="pages\contactsPage.cs" />
+    <Compile Include="pages\deactivateActivateQuestion.cs" />
+    <Compile Include="pages\deleteContactNO.cs" />
+    <Compile Include="pages\deleteContactYes.cs" />
+    <Compile Include="pages\deleteQuestionNO.cs" />
+    <Compile Include="pages\deleteQuestionYes.cs" />
+    <Compile Include="pages\filteringContact.cs" />
+    <Compile Include="pages\openQuestionPage.cs" />
+    <Compile Include="step_definitions\DeleteProductsYesSteps.cs" />
+    <Compile Include="pages\deactiveActivateProducts.cs" />
+    <Compile Include="pages\deleteProductNo.cs" />
+    <Compile Include="pages\deleteProductYes.cs" />
+    <Compile Include="step_definitions\DeleteProductsNoSteps.cs" />
+    <Compile Include="step_definitions\ProductsOnOffSteps.cs" />
+    <Compile Include="step_definitions\AddProductSteps.cs" />
+    <Compile Include="step_definitions\DeletePartnersNoSteps.cs" />
+    <Compile Include="step_definitions\DeletePartnersYesSteps.cs" />
+    <Compile Include="pages\addProduct.cs" />
+    <Compile Include="pages\deleteNewPartnerNO.cs" />
+    <Compile Include="pages\deleteNewPartnerYES.cs" />
+    <Compile Include="step_definitions\DeactivateActivatePartnersSteps.cs" />
+    <Compile Include="pages\deactivateActivatePartner.cs" />
+    <Compile Include="step_definitions\AddPartnersSteps.cs" />
+    <Compile Include="pages\addPartner.cs" />
+    <Compile Include="step_definitions\DeleteNewUserSteps.cs" />
+    <Compile Include="step_definitions\DeleteNewUserNoSteps.cs" />
+    <Compile Include="step_definitions\ActivateDeactivateUser.cs" />
+    <Compile Include="step_definitions\DeactivateActivateSalonSteps.cs" />
+    <Compile Include="pages\addReseller.cs" />
+    <Compile Include="pages\deactiveNewUser.cs" />
+    <Compile Include="pages\deleteFeatureYes.cs" />
+    <Compile Include="pages\deleteNewUserNO.cs" />
+    <Compile Include="pages\deleteNewUserYES.cs" />
+    <Compile Include="pages\editNewUser.cs" />
+    <Compile Include="pages\addUser.cs" />
+    <Compile Include="step_definitions\EditNewUsersSteps.cs" />
+    <Compile Include="step_definitions\ResellerSteps.cs" />
+    <Compile Include="step_definitions\RegisterNewUserSteps.cs" />
+    <Compile Include="step_definitions\DeleteFeatureYes.cs" />
+    <Compile Include="step_definitions\NotificationSteps.cs" />
+    <Compile Include="pages\notifications.cs" />
+    <Compile Include="step_definitions\DeleteSalonSteps.cs" />
+    <Compile Include="pages\albumsAdding.cs" />
+    <Compile Include="pages\deleteAlbums.cs" />
+    <Compile Include="pages\editSalon.cs" />
+    <Compile Include="step_definitions\AddAlbumAndImagesSteps.cs" />
+    <Compile Include="step_definitions\DeleteEmployeeNo.cs" />
+    <Compile Include="config\Driver.cs" />
+    <Compile Include="pages\deactivateSalon.cs" />
+    <Compile Include="pages\deletFeatureNo.cs" />
+    <Compile Include="step_definitions\DeleteFeatureNo.cs" />
+    <Compile Include="pages\deleteSalon.cs" />
+    <Compile Include="pages\addEmployee.cs" />
+    <Compile Include="step_definitions\AddFeatureSteps.cs" />
+    <Compile Include="step_definitions\AddEmployeeSteps.cs" />
+    <Compile Include="pages\editProfile.cs" />
+    <Compile Include="pages\addFeatures.cs" />
+    <Compile Include="step_definitions\AddSalonSteps.cs" />
+    <Compile Include="step_definitions\EditSalonSteps.cs" />
+    <Compile Include="step_definitions\SetupSteps.cs" />
+    <Compile Include="pages\addSalon.cs" />
+    <Compile Include="pages\checkSwitcher.cs" />
+    <Compile Include="step_definitions\DeleteAlbumsSteps.cs" />
+    <Compile Include="step_definitions\EditProfileSteps.cs" />
+    <Compile Include="step_definitions\employeeList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cucumber\Employee.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Features.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Features.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Products.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Salon.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Salon.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Switcher.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Switcher.feature</DependentUpon>
+    </Compile>
+    <Compile Include="step_definitions\DeleteEmployeeYes.cs" />
+    <Compile Include="Cucumber\Notifications.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notifications.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Users.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Reseller.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reseller.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Partners.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Partners.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Cucumber\Contacts.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contacts.feature</DependentUpon>
+    </Compile>
+    <Compile Include="utils\Check.cs" />
+    <Compile Include="utils\Find.cs" />
+    <Compile Include="utils\Generate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Cucumber\Questions.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Questions.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\SpecFlowFeature1.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Company.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Company.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Brands.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Brands.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Promotional.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Promotional.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Default.srprofile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Cucumber\Employee.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Employee.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Features.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Features.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Products.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Products.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Salon.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Salon.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Switcher.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Switcher.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Notifications.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Notifications.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Users.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Users.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Reseller.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Reseller.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Partners.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Partners.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Cucumber\Contacts.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Contacts.feature.cs</LastGenOutput>
+    </None>
+    <None Include="runtests.cmd" />
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\SeleniumWebDrivers.1.0.0.4\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\SeleniumWebDrivers.1.0.0.4\content\DriversVersions.txt">
+      <Link>DriversVersions.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\SeleniumWebDrivers.1.0.0.4\content\geckodriver.exe">
+      <Link>geckodriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\SeleniumWebDrivers.1.0.0.4\content\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\SeleniumWebDrivers.1.0.0.4\content\MicrosoftWebDriver.exe">
+      <Link>MicrosoftWebDriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\WebDriver.GeckoDriver.0.9.0\content\wires.exe">
+      <Link>wires.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.25.0.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.25.0.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.25.0.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.25.0.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
