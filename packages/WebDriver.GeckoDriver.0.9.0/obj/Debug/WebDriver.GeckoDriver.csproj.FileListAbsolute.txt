@@ -1,4 +1,0 @@
-C:\Users\cdt_l\Source\Repos\WebDriver.GeckoDriver\WebDriver.GeckoDriver\bin\Debug\WebDriver.GeckoDriver.dll
-C:\Users\cdt_l\Source\Repos\WebDriver.GeckoDriver\WebDriver.GeckoDriver\bin\Debug\WebDriver.GeckoDriver.pdb
-C:\Users\cdt_l\Source\Repos\WebDriver.GeckoDriver\WebDriver.GeckoDriver\obj\Debug\WebDriver.GeckoDriver.dll
-C:\Users\cdt_l\Source\Repos\WebDriver.GeckoDriver\WebDriver.GeckoDriver\obj\Debug\WebDriver.GeckoDriver.pdb
